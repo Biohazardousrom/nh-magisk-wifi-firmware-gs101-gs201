@@ -1,0 +1,21 @@
+# Copyright 2019 Google Inc. All Rights Reserved.
+
+service wifi_sniffer_start /vendor/bin/wifi_sniffer start
+    class late_start
+    user root
+    group root system
+    disabled
+    oneshot
+
+service wifi_sniffer_stop /vendor/bin/wifi_sniffer stop
+    class late_start
+    user root
+    group root system
+    disabled
+    oneshot
+
+on property:vendor.wifi.sniffer.start=true
+    start wifi_sniffer_start
+
+on property:vendor.wifi.sniffer.start=false
+    start wifi_sniffer_stop

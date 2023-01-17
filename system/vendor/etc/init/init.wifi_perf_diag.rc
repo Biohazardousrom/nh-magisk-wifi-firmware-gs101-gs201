@@ -1,0 +1,21 @@
+# Copyright 2022 Google Inc. All Rights Reserved.
+
+service wifi_perf_diag_start /vendor/bin/wifi_perf_diag start
+    class late_start
+    user root
+    group root system
+    disabled
+    oneshot
+
+service wifi_perf_diag_stop /vendor/bin/wifi_perf_diag stop
+    class late_start
+    user root
+    group root system
+    disabled
+    oneshot
+
+on property:vendor.wifi.perf_diag.start=true
+    start wifi_perf_diag_start
+
+on property:vendor.wifi.perf_diag.start=false
+    start wifi_perf_diag_stop
