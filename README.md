@@ -14,7 +14,7 @@ This module should work with any variant of Nethunter, but it was created to wor
 - **Realtek** - RTL8188* (EU/FTV), RTL8192* (CU/EU/DE/SE), RTL8821/12* (AE/AU/BU), RTL8822BU
 - **Atheros** - AR9170, AR7010
 - **Mediatek** - MT7601u
-- **Broadcom** - bcm43xx (not tested), BRCM4335, BRCM4339, BRCM4354
+- **Broadcom** - bcm43xx (not tested), BRCM4335, BRCM4339, BRCM4354, bcmhd4389
 
 
 #### Supported adapters
